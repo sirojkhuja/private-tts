@@ -612,6 +612,8 @@ def main():
     )
 
     fastspeech2_brain.input_encoder = input_encoder
+    hparams["train_dataloader_opts"]["num_workers"] = 2
+    hparams["valid_dataloader_opts"]["num_workers"] = 2
     # Training
     fastspeech2_brain.fit(
         fastspeech2_brain.hparams.epoch_counter,

@@ -66,7 +66,7 @@ class AttentionSeq2Seq(nn.Module):
         self.use_word_emb = use_word_emb
         self.word_emb_enc = word_emb_enc if use_word_emb else None
 
-    def forward(self, grapheme_encoded, phn_encoded=None, word_emb=None):
+    def forward(self, grapheme_encoded, phn_encoded=None, word_emb=None, grapheme_list=[], grapheme_encoded_list=[]):
         """Computes the forward pass
 
         Arguments

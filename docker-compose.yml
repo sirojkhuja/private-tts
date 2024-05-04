@@ -1,0 +1,10 @@
+version: "3"
+services:
+  tts:
+    image: amd64/python
+    container_name: speechbrain-tts
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+      - ./infrastructure/docker/etc/sysctl.conf:/etc/sysctl.conf
+    tty: true
