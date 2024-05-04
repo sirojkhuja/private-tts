@@ -18,4 +18,4 @@ pip-e-install:
 	@$(DC) pip install -e .
 
 train:
-	@$(DC) cd /var/www/html/recipes/LJSpeech/TTS/fastspeech2 && python train.py --device=cpu --max_grad_norm=1.0 --data_folder=LJSpeech-1.1 hparams/train.yaml
+	@$(DC) /bin/bash -c "cd /var/www/html/recipes/LJSpeech/TTS/fastspeech2 && python train.py --device=cpu --max_grad_norm=1.0 --data_folder=LJSpeech hparams/train.yaml"
