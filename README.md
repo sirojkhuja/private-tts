@@ -1,5 +1,7 @@
 ### How to run
 
+In order to run the following commands, your OS should have `docker` and `make`
+
 1. Run setup script for docker to run the container and install all required packages
 
 ```bash
